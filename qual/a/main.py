@@ -1,6 +1,7 @@
 import sys
 
-sys.stdin = open('sample.in')
+sys.stdin = open('large.in')
+sys.stdout = open('large.out', 'w')
 
 def lines(data):
 	rows = [
@@ -35,4 +36,4 @@ n = int(raw_input())
 for i in range(n):
 	rows = [raw_input() for _ in range(4)]
 	raw_input()
-	print "Case #{}: {}".format(i+1, ssolve(rows))
+	print "Case #{}: {}".format(i+1, solve(rows))
