@@ -4,7 +4,7 @@ import math
 from collections import deque, namedtuple
 import operator
 
-dbg = sys.stdout
+dbg = open('small.dbg', 'w')
 
 sys.stdin = open('small.in')
 sys.stdout = open('small.out', 'w')
@@ -100,17 +100,11 @@ def _collect(seq, func, first=None):
 def collect(seq, func, first=None):
 	return list(_collect(seq, func, first))
 
-def rcollect(seq, func, last=None):
-	res = collect(reversed(seq), func, last)
-	res.reverse()
-	return res
-
-
 def solve(quats, repts):
 	n = len(quats)
 
-	fsum = collect(quats, operator.mul, first=1)
-	bsum = collect(reversed(quats), lambda t, x: x.inv() * t, first=1)
+	fsum = collect(quats,           lambda t, x: t * x, first=1)
+	bsum = collect(reversed(quats), lambda t, x: x * t, first=1)
 
 
 	total_prod = 1
@@ -118,10 +112,10 @@ def solve(quats, repts):
 		total_prod *= fsum[-1]
 
 	if total_prod != 1:
-		print >> dbg, "Total {} != 1".format(total_prod)
+		print >> dbg, "Total == {}^{} == {} != 1".format(fsum[-1], repts, total_prod)
 		return "NO"
 
-	print >> dbg, "In:  ", quats
+	print >> dbg, "In:  ", quats, '*', repts
 	print >> dbg, "Fsum:", fsum
 	print >> dbg, "Bsum:", bsum
 
@@ -139,7 +133,7 @@ def solve(quats, repts):
 		return "NO"
 
 	lastK = 0
-	look_for = K.inv()
+	look_for = K
 	for _ in range(3):
 		try:
 			lastK -= bsum.index(look_for)
