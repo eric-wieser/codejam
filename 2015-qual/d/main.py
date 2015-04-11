@@ -40,7 +40,7 @@ def solve(x, r, c):
 		print >> dbg, "baseline wider than height to force orientation, enough to reach top"
 		return False
 
-	elif x == 5 and sm == 3:
+	elif x == 5 and sm == 3 and lg == 5:
 		print >> dbg, "W segments fillable space"
 		return False
 
