@@ -3,8 +3,8 @@ import sys
 import math
 from collections import deque
 
-sys.stdin = open('small.in')
-sys.stdout = open('small.out', 'w')
+sys.stdin = open('large.in')
+sys.stdout = open('large.out', 'w')
 
 def solve(counts):
 	clapping = 0
