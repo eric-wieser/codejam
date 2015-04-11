@@ -4,10 +4,12 @@ import math
 from collections import deque, namedtuple
 import operator
 
-dbg = open('small.dbg', 'w')
+which = 'small.3'
 
-sys.stdin = open('small.in')
-sys.stdout = open('small.out', 'w')
+dbg = open('{}.dbg'.format(which), 'w')
+
+sys.stdin = open('{}.in'.format(which))
+sys.stdout = open('{}.out'.format(which), 'w')
 
 class Quat(namedtuple('Quat', 'x i j k')):
 	def __new__(cls, x=0, i=0, j=0, k=0):
@@ -20,9 +22,9 @@ class Quat(namedtuple('Quat', 'x i j k')):
 		return Quat(
 			x=self.x*other.x - self.i*other.i - self.j*other.j - self.k*other.k,
 
-			i=self.x*other.i + self.i*other.x - self.j*other.k + self.k*other.j,
-			j=self.x*other.j + self.j*other.x - self.k*other.i + self.i*other.k,
-			k=self.x*other.k + self.k*other.x - self.i*other.j + self.j*other.i
+			i=self.x*other.i + self.i*other.x + self.j*other.k - self.k*other.j,
+			j=self.x*other.j + self.j*other.x + self.k*other.i - self.i*other.k,
+			k=self.x*other.k + self.k*other.x + self.i*other.j - self.j*other.i
 		)
 
 	def __rmul__(self, other):
@@ -100,6 +102,9 @@ def _collect(seq, func, first=None):
 def collect(seq, func, first=None):
 	return list(_collect(seq, func, first))
 
+def prod(seq):
+	return reduce(lambda a, b: a*b, seq)
+
 def solve(quats, repts):
 	n = len(quats)
 
@@ -108,11 +113,11 @@ def solve(quats, repts):
 
 
 	total_prod = 1
-	for x in range(repts % 3):
+	for x in range(repts % 4):
 		total_prod *= fsum[-1]
 
-	if total_prod != 1:
-		print >> dbg, "Total == {}^{} == {} != 1".format(fsum[-1], repts, total_prod)
+	if total_prod != -1:
+		print >> dbg, "Total == {}^{} == {} != -1".format(fsum[-1], repts, total_prod)
 		return "NO"
 
 	print >> dbg, "In:  ", quats, '*', repts
@@ -121,7 +126,7 @@ def solve(quats, repts):
 
 	firstI = 0
 	look_for = I
-	for _ in range(3):
+	for _ in range(4):
 		try:
 			firstI += fsum.index(look_for)
 			break
@@ -134,26 +139,35 @@ def solve(quats, repts):
 
 	lastK = 0
 	look_for = K
-	for _ in range(3):
+	for _ in range(4):
 		try:
 			lastK -= bsum.index(look_for)
 			break
 		except ValueError:
 			lastK -= n
-			look_for = bsum[-1].inv() * look_for
+			look_for = look_for * bsum[-1].inv()  # (bsum * bsum[-1]).find(K)
 	else:
 		print >> dbg, "No K"
 		return "NO"
 
-	lastK += n * repts
 
-	if lastK > firstI:
-		if n * repts < 100:
+	if lastK + n * repts > firstI:
+		print >> dbg, "iIK: ", firstI, lastK, lastK % (4*n)
+		if n * repts < 1000:
 			all_quats = quats * repts
-			print >> dbg, "IJK: ", all_quats[:firstI], all_quats[firstI:lastK], all_quats[lastK:]
+			i_comps = all_quats[:firstI]
+			j_comps = all_quats[firstI:lastK]
+			k_comps = all_quats[lastK:]
+			print >> dbg, "IJK: ", i_comps, j_comps, k_comps
 		else:
-			all_quats = quats * 3
-			print >> dbg, "I K: ", all_quats[:firstI], all_quats[lastK % (3*n):]
+			all_quats = quats * 4
+			i_comps = all_quats[:firstI]
+			k_comps = all_quats[lastK:]
+			print >> dbg, "I K: ", i_comps, k_comps
+
+		assert prod(i_comps) == I
+		assert prod(k_comps) == K, prod(k_comps)
+
 		return "YES"
 
 	else:
