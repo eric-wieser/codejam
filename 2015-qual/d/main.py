@@ -3,7 +3,7 @@ import sys
 import math
 
 
-which = 'small'
+which = 'large'
 
 dbg = open('{}.dbg'.format(which), 'w')
 
@@ -38,6 +38,14 @@ def solve(x, r, c):
 
 	elif x >= 2 * sm:
 		print >> dbg, "baseline wider than height to force orientation, enough to reach top"
+		return False
+
+	elif x == 5 and sm == 3:
+		print >> dbg, "W segments fillable space"
+		return False
+
+	elif x == 6 and lg == 4:
+		print >> dbg, "squiggle segments fillable space"
 		return False
 
 

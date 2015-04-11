@@ -1,0 +1,473 @@
+Case #1:
+2x2 2-omino
+OK
+
+Case #2:
+1x3 2-omino
+can't divide
+Impossible
+
+Case #3:
+4x1 4-omino
+an L shape doesn't fit
+Impossible
+
+Case #4:
+2x3 3-omino
+OK
+
+Case #5:
+4x4 8-omino
+1*x cannot be contained
+Impossible
+
+Case #6:
+11x11 11-omino
+omino exists with a hole
+Impossible
+
+Case #7:
+12x12 6-omino
+OK
+
+Case #8:
+6x10 5-omino
+OK
+
+Case #9:
+4x5 17-omino
+can't divide
+Impossible
+
+Case #10:
+3x3 2-omino
+can't divide
+Impossible
+
+Case #11:
+1x3 3-omino
+an L shape doesn't fit
+Impossible
+
+Case #12:
+2x7 7-omino
+an L shape doesn't fit
+Impossible
+
+Case #13:
+10x16 20-omino
+1*x cannot be contained
+Impossible
+
+Case #14:
+15x18 18-omino
+omino exists with a hole
+Impossible
+
+Case #15:
+15x2 5-omino
+an L shape doesn't fit
+Impossible
+
+Case #16:
+4x4 3-omino
+can't divide
+Impossible
+
+Case #17:
+2x20 5-omino
+an L shape doesn't fit
+Impossible
+
+Case #18:
+2x10 5-omino
+an L shape doesn't fit
+Impossible
+
+Case #19:
+12x2 12-omino
+an L shape doesn't fit
+Impossible
+
+Case #20:
+10x7 5-omino
+OK
+
+Case #21:
+9x2 6-omino
+an L shape doesn't fit
+Impossible
+
+Case #22:
+10x10 10-omino
+omino exists with a hole
+Impossible
+
+Case #23:
+16x6 8-omino
+omino exists with a hole
+Impossible
+
+Case #24:
+10x4 5-omino
+OK
+
+Case #25:
+1x7 7-omino
+an L shape doesn't fit
+Impossible
+
+Case #26:
+4x20 6-omino
+can't divide
+Impossible
+
+Case #27:
+18x1 6-omino
+an L shape doesn't fit
+Impossible
+
+Case #28:
+4x4 2-omino
+OK
+
+Case #29:
+15x5 10-omino
+can't divide
+Impossible
+
+Case #30:
+15x3 5-omino
+W segments fillable space
+Impossible
+
+Case #31:
+20x20 6-omino
+can't divide
+Impossible
+
+Case #32:
+4x4 4-omino
+OK
+
+Case #33:
+4x15 5-omino
+OK
+
+Case #34:
+10x5 5-omino
+OK
+
+Case #35:
+10x3 6-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #36:
+16x10 13-omino
+can't divide
+Impossible
+
+Case #37:
+20x5 5-omino
+OK
+
+Case #38:
+10x10 5-omino
+OK
+
+Case #39:
+4x3 4-omino
+OK
+
+Case #40:
+6x6 6-omino
+OK
+
+Case #41:
+14x5 7-omino
+omino exists with a hole
+Impossible
+
+Case #42:
+4x4 5-omino
+can't divide
+Impossible
+
+Case #43:
+9x9 9-omino
+omino exists with a hole
+Impossible
+
+Case #44:
+5x7 7-omino
+omino exists with a hole
+Impossible
+
+Case #45:
+3x3 4-omino
+can't divide
+Impossible
+
+Case #46:
+20x1 5-omino
+an L shape doesn't fit
+Impossible
+
+Case #47:
+17x14 20-omino
+can't divide
+Impossible
+
+Case #48:
+4x9 6-omino
+OK
+
+Case #49:
+3x20 6-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #50:
+10x1 10-omino
+an L shape doesn't fit
+Impossible
+
+Case #51:
+4x1 2-omino
+OK
+
+Case #52:
+7x7 5-omino
+can't divide
+Impossible
+
+Case #53:
+5x5 6-omino
+can't divide
+Impossible
+
+Case #54:
+2x2 3-omino
+can't divide
+Impossible
+
+Case #55:
+4x7 7-omino
+omino exists with a hole
+Impossible
+
+Case #56:
+6x3 6-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #57:
+20x20 20-omino
+omino exists with a hole
+Impossible
+
+Case #58:
+1x1 1-omino
+OK
+
+Case #59:
+9x12 18-omino
+1*x cannot be contained
+Impossible
+
+Case #60:
+3x2 4-omino
+can't divide
+Impossible
+
+Case #61:
+19x19 19-omino
+omino exists with a hole
+Impossible
+
+Case #62:
+10x11 8-omino
+can't divide
+Impossible
+
+Case #63:
+3x10 5-omino
+W segments fillable space
+Impossible
+
+Case #64:
+14x4 7-omino
+omino exists with a hole
+Impossible
+
+Case #65:
+14x20 7-omino
+omino exists with a hole
+Impossible
+
+Case #66:
+6x5 6-omino
+OK
+
+Case #67:
+3x20 5-omino
+W segments fillable space
+Impossible
+
+Case #68:
+3x8 6-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #69:
+3x5 5-omino
+W segments fillable space
+Impossible
+
+Case #70:
+12x15 18-omino
+1*x cannot be contained
+Impossible
+
+Case #71:
+2x5 5-omino
+an L shape doesn't fit
+Impossible
+
+Case #72:
+19x1 19-omino
+an L shape doesn't fit
+Impossible
+
+Case #73:
+4x6 6-omino
+OK
+
+Case #74:
+5x5 5-omino
+OK
+
+Case #75:
+7x1 8-omino
+can't divide
+Impossible
+
+Case #76:
+8x8 8-omino
+omino exists with a hole
+Impossible
+
+Case #77:
+5x20 10-omino
+omino exists with a hole
+Impossible
+
+Case #78:
+20x20 5-omino
+OK
+
+Case #79:
+1x1 2-omino
+can't divide
+Impossible
+
+Case #80:
+6x9 18-omino
+1*x cannot be contained
+Impossible
+
+Case #81:
+1x4 2-omino
+OK
+
+Case #82:
+3x6 18-omino
+1*x cannot be contained
+Impossible
+
+Case #83:
+5x6 5-omino
+OK
+
+Case #84:
+5x1 5-omino
+an L shape doesn't fit
+Impossible
+
+Case #85:
+8x8 16-omino
+1*x cannot be contained
+Impossible
+
+Case #86:
+3x4 3-omino
+OK
+
+Case #87:
+20x4 5-omino
+OK
+
+Case #88:
+6x7 7-omino
+omino exists with a hole
+Impossible
+
+Case #89:
+7x8 14-omino
+1*x cannot be contained
+Impossible
+
+Case #90:
+18x18 6-omino
+OK
+
+Case #91:
+10x9 15-omino
+1*x cannot be contained
+Impossible
+
+Case #92:
+4x5 5-omino
+OK
+
+Case #93:
+5x3 5-omino
+W segments fillable space
+Impossible
+
+Case #94:
+3x7 7-omino
+an L shape doesn't fit
+Impossible
+
+Case #95:
+3x8 5-omino
+can't divide
+Impossible
+
+Case #96:
+7x7 7-omino
+omino exists with a hole
+Impossible
+
+Case #97:
+2x4 4-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #98:
+1x4 4-omino
+an L shape doesn't fit
+Impossible
+
+Case #99:
+19x10 19-omino
+omino exists with a hole
+Impossible
+
+Case #100:
+3x4 6-omino
+1*x cannot be contained
+Impossible
+

@@ -1,0 +1,28 @@
+Case #1:
+2x2 2-omino
+OK
+
+Case #2:
+1x3 2-omino
+can't divide
+Impossible
+
+Case #3:
+4x1 4-omino
+an L shape doesn't fit
+Impossible
+
+Case #4:
+2x3 3-omino
+OK
+
+Case #5:
+3x12 6-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #6:
+3x4 6-omino
+1*x cannot be contained
+Impossible
+
