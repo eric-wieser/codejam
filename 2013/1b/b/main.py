@@ -33,12 +33,13 @@ def solve(n, x, y):
 	x = abs(x)
 	i, t = odd_triangle_below(n)
 	rest = n - t
+	print >> debug, n, x, y
 
 	print >> debug, "    n >= T(%d)" % i
 	if x + y < i:
 		print >> debug, "    Within the triangle?"
 		return 1
-	elif x + y > i + 2 or rest == 0:
+	elif x + y > i + 1 or rest == 0:
 		return 0
 	elif rest >= 2*(i + 1):
 		print >> debug, "    both sides full"
@@ -55,6 +56,7 @@ def solve(n, x, y):
 	else:
 		print >> debug, "    ", i, rest, t
 		print >> debug, "    hmmm %d %d" % (y, rest)
+		print >> debug, x + y, x, y, i
 		return partial_prob(i  - y, rest)
 
 
