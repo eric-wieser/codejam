@@ -3,11 +3,10 @@ import sys
 import math
 from collections import Counter
 
-which = 'mysample'
+which = 'large'
 
 sys.stdin = open('{}.in'.format(which))
-# sys.stdout = open('{}.out'.format(which), 'w')
-
+sys.stdout = open('{}.out'.format(which), 'w')
 
 
 def solve(counts):

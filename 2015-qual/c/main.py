@@ -4,7 +4,7 @@ import math
 from collections import deque, namedtuple
 import operator
 
-which = 'small.3'
+which = 'large'
 
 dbg = open('{}.dbg'.format(which), 'w')
 

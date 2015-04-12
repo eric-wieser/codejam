@@ -44,10 +44,6 @@ def solve(x, r, c):
 		print >> dbg, "W segments fillable space"
 		return False
 
-	elif x == 6 and lg == 4:
-		print >> dbg, "squiggle segments fillable space"
-		return False
-
 
 	return True
 
