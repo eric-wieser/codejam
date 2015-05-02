@@ -1,3 +1,5 @@
+[[7, 0, 4, 2, 2], [8, 0, 0, 6, 1]]
+[[3, 0, 2, 0, 0], [2, 2, 1, 0, 0], [-1, 0, 4, 2, 0], [1, 0, 0, 4, 0]]
 Case #1: 0
 Case #2: 14
 Case #3: 0
@@ -28,7 +30,7 @@ Case #27: 14
 Case #28: 6
 Case #29: 0
 Case #30: 11
-Case #31: 2
+Case #31: 0
 Case #32: 13
 Case #33: 0
 Case #34: 15
@@ -40,7 +42,7 @@ Case #39: 0
 Case #40: 8
 Case #41: 0
 Case #42: 2
-Case #43: 2
+Case #43: 0
 Case #44: 0
 Case #45: 0
 Case #46: 0
@@ -62,7 +64,7 @@ Case #61: 18
 Case #62: 0
 Case #63: 22
 Case #64: 14
-Case #65: 4
+Case #65: 3
 Case #66: 2
 Case #67: 4
 Case #68: 14
@@ -78,7 +80,7 @@ Case #77: 0
 Case #78: 0
 Case #79: 0
 Case #80: 0
-Case #81: 4
+Case #81: 3
 Case #82: 3
 Case #83: 0
 Case #84: 0
