@@ -10,6 +10,21 @@ dbg = open('{}.dbg'.format(which), 'w')
 sys.stdin = open('{}.in'.format(which))
 sys.stdout = open('{}.out'.format(which), 'w')
 
+"""
+Fails for
+
+[[0 1 0 1 0]
+ [1 0 1 0 1]
+ [0 1 0 1 0]]
+
+ vs
+
+
+[[1 0 1 0 1]
+ [0 1 0 1 0]
+ [1 0 1 0 1]]
+
+"""
 
 def solve(r, c, n):
 	r, c = min(r, c), max(r, c)
@@ -20,8 +35,8 @@ def solve(r, c, n):
 	neighbours[:,0] -= 1
 	neighbours[:,-1] -= 1
 
-	print >> dbg, "G:", grid
-	print >> dbg, "N:", neighbours
+	print >> dbg, "G:\n", grid
+	print >> dbg, "N:\n", neighbours
 
 	for i in range(0, r*c - n):
 
@@ -33,8 +48,8 @@ def solve(r, c, n):
 		if 0 <= y-1: neighbours[x, y-1] -= 1
 
 		grid[x, y] = 0
-		print >> dbg, "G:", grid
-		print >> dbg, "N:", neighbours
+		print >> dbg, "G:\n", grid
+		print >> dbg, "N:\n", neighbours
 
 	count = np.sum(grid*neighbours)
 
