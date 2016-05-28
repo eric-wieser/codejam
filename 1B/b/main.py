@@ -1,5 +1,6 @@
 import sys
 import numpy as np
+import itertools
 
 def prob_n(event_probs):
     """
@@ -25,8 +26,17 @@ def solve(ps, K):
 	ps = sorted(ps)
 	chosen = ps[:K2] + ps[-K2:]
 	assert len(chosen) == K
+	print(chosen, file=debug)
 	return prob_n(chosen)[K2]
 
+def solve_bad(ps, K):
+	best = max(
+		prob_n(subset)[K // 2]
+		for subset in itertools.combinations(ps, K)
+	)
+	return best
+
+debug = sys.stdout
 sys.stdin = open('small.in')
 sys.stdout = open('small.out', 'w')
 
@@ -36,5 +46,5 @@ for i in range(T):
     N, K = (int(x) for x in input().split())
     ps = [float(p) for p in input().split()]
     assert len(ps) == N
-    res = solve(ps, K)
+    res = solve_bad(ps, K)
     print("Case #{}: {}".format(i+1, res))
