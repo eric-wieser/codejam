@@ -13,8 +13,8 @@ def solve(N):
         if all(seen):
             return prod
 
-sys.stdin = open('small.in')
-sys.stdout = open('small.out', 'w')
+sys.stdin = open('large.in')
+sys.stdout = open('large.out', 'w')
 
 T = int(input())
 

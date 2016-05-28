@@ -48,7 +48,8 @@ def solve(N, Fs):
 
 
 sys.stdin = open('large.in')
-# sys.stdout = open('large.out', 'w')
+debug = sys.stdout
+sys.stdout = open('large.out', 'w')
 
 T = int(input())
 
@@ -58,3 +59,4 @@ for i in range(T):
     assert len(Fs) == N
     res = solve(N, Fs)
     print("Case #{}: {}".format(i+1, res))
+    print("Case #{}: {}".format(i+1, res), file=debug)
