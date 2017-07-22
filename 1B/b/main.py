@@ -54,18 +54,12 @@ def solve_replace(ps, K):
 	while True:
 		attempt = []
 		for i in choose:
-			for i2 in choose:
-				for j in all_i - choose:
-					for j2 in all_i - choose:
-						if i == i2 or j == j2:
-							add = {i}
-							remove = {j}
-						else:
-							add = {i, i2}
-							remove = {j, j2}
-					choose_new = (choose - add) | remove
-					prob_new = p_tie([ps[k] for k in choose_new])
-					attempt.append((prob_new, choose_new))
+			for j in all_i - choose:
+				add = {i}
+				remove = {j}
+				choose_new = (choose - add) | remove
+				prob_new = p_tie([ps[k] for k in choose_new])
+				attempt.append((prob_new, choose_new))
 
 		if not attempt:
 			break
@@ -92,9 +86,9 @@ def solve_bad(ps, K):
 	print(sorted(best), file=debug)
 	return prob_n(best)[K // 2]
 
-debug = open('sample.debug', 'w')
-sys.stdin = open('sample.in')
-sys.stdout = open('sample.out', 'w')
+debug = open('small.debug', 'w')
+sys.stdin = open('small.in')
+sys.stdout = open('small.out', 'w')
 
 T = int(input())
 
@@ -103,5 +97,5 @@ for i in range(T):
     N, K = (int(x) for x in input().split())
     ps = [float(p) for p in input().split()]
     assert len(ps) == N
-    res = solve_replace(ps, K)
+    res = solve_pairwise(ps, K)
     print("Case #{}: {}".format(i+1, res))
