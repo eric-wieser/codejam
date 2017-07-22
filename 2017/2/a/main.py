@@ -5,7 +5,7 @@ import math
 import heapq
 import numpy as np
 
-which = "sample"
+which = "large"
 
 def ceildiv(a, b):
     return (a + (b-1)) // b
@@ -41,12 +41,11 @@ def solve4(groups):
         [0, 2, 0],
         [1, 0, 1],
     ])
-    m = np.array([m1, m2, m3])
-    n = m0
+    mtot = np.sum(m)
 
-    with np.errstate(divide='ignore'):
-        k_max = (m / U).min(axis=1)
-        k_max = np.where(np.isnan(k_max), 0, k_max).astype(int)
+    k_max = np.ones(U.shape, int) * mtot
+    np.floor_divide(m, U, out=k_max, where=U!=0)
+    k_max = k_max.min(axis=1)
 
     ks = np.indices(k_max + 1).reshape(4, -1)
 
@@ -54,38 +53,91 @@ def solve4(groups):
 
     invalid = np.any(left_bym < 0, axis=0, keepdims=True)
     left = np.sum(left_bym, axis=0, keepdims=True)
-
-    print(ks)
-    print(left_bym)
-    print(left)
+    left[invalid] = np.sum(m)
 
 
+    best_i = np.argmin(left)
+    k = ks[:,best_i]
+    lbm = left_bym[:, best_i]
 
-    if m3 > m1:
-        n += m1
-        m3 -= m1
-        m1 -= m1
-    else:
-        n += m3
-        m3 -= m3
-        m1 -= m3
+    print(k)
+    print(lbm)
 
+    return m0 + np.min(left)
 
 
+def solve(groups, P):
+    groups = np.array(groups)
 
+    ms = np.sum(groups % P == np.arange(P)[:,None], axis=1)
 
-def solve(G, P):
     if P == 2:
-        return solve2(G)
+        U = np.array([
+            [2]
+        ])
     elif P == 3:
-        return solve3(G)
+        U = np.array([
+            #1, 2
+            [3, 0],
+            [0, 3],
+            [1, 1]
+        ])
     elif P == 4:
-        return solve4(G)
+        U = np.array([
+            #1, 2, 3
+            [4, 0, 0],
+            [0, 2, 0],
+            [0, 0, 4],
+            [2, 1, 0],
+            [1, 0, 1],
+            [0, 1, 2]
+        ])
     else:
         raise ValueError
 
+    m = ms[1:]
+
+    mtot = np.sum(m)
+
+    k_max = np.ones(U.shape, int) * mtot
+    np.floor_divide(m, U, out=k_max, where=U!=0)
+    k_max = k_max.min(axis=1)
+
+    ks = np.indices(k_max + 1).reshape(U.shape[0], -1)
+
+    n_groups = U.T @ ks  #[size,ki]
+
+    invalid = np.any(n_groups > m[:,None], axis=0, keepdims=True)
+    happy = ks.sum(axis=0, keepdims=True)
+    happy[invalid] = 0
+
+    best_i = np.argmax(happy.ravel())
+    best_happy = happy[:,best_i].squeeze()
+
+    n = ms[0] + best_happy
+
+    if n_groups[:,best_i].sum() != mtot:
+        n += 1
+
+    return n
+
+solve(np.random.randint(0, 4, 100), 4)
+
+
+
+
+# def solve(G, P):
+#     if P == 2:
+#         return solve2(G)
+#     elif P == 3:
+#         return solve3(G)
+#     elif P == 4:
+#         return solve4(G)
+#     else:
+#         raise ValueError
+
 sys.stdin = open('{}.in'.format(which))
-# sys.stdout = open('{}.out'.format(which), 'w')
+sys.stdout = open('{}.out'.format(which), 'w')
 
 T = int(input())
 
