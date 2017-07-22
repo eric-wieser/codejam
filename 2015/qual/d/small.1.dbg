@@ -1,0 +1,284 @@
+Case #1:
+2x2 2-omino
+OK
+
+Case #2:
+1x3 2-omino
+can't divide
+Impossible
+
+Case #3:
+4x1 4-omino
+an L shape doesn't fit
+Impossible
+
+Case #4:
+2x3 3-omino
+OK
+
+Case #5:
+3x1 4-omino
+can't divide
+Impossible
+
+Case #6:
+4x1 1-omino
+OK
+
+Case #7:
+3x2 2-omino
+OK
+
+Case #8:
+3x1 2-omino
+can't divide
+Impossible
+
+Case #9:
+4x3 4-omino
+OK
+
+Case #10:
+1x4 3-omino
+can't divide
+Impossible
+
+Case #11:
+1x3 3-omino
+an L shape doesn't fit
+Impossible
+
+Case #12:
+2x4 4-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #13:
+3x3 2-omino
+can't divide
+Impossible
+
+Case #14:
+2x3 1-omino
+OK
+
+Case #15:
+4x3 2-omino
+OK
+
+Case #16:
+1x1 3-omino
+can't divide
+Impossible
+
+Case #17:
+4x2 4-omino
+baseline wider than height to force orientation, enough to reach top
+Impossible
+
+Case #18:
+3x4 3-omino
+OK
+
+Case #19:
+3x1 3-omino
+an L shape doesn't fit
+Impossible
+
+Case #20:
+2x1 2-omino
+OK
+
+Case #21:
+4x2 1-omino
+OK
+
+Case #22:
+3x2 3-omino
+OK
+
+Case #23:
+3x4 2-omino
+OK
+
+Case #24:
+1x3 4-omino
+can't divide
+Impossible
+
+Case #25:
+4x4 3-omino
+can't divide
+Impossible
+
+Case #26:
+3x1 1-omino
+OK
+
+Case #27:
+1x2 2-omino
+OK
+
+Case #28:
+2x3 2-omino
+OK
+
+Case #29:
+4x3 3-omino
+OK
+
+Case #30:
+2x3 4-omino
+can't divide
+Impossible
+
+Case #31:
+2x2 4-omino
+1*x cannot be contained
+Impossible
+
+Case #32:
+3x3 3-omino
+OK
+
+Case #33:
+2x2 1-omino
+OK
+
+Case #34:
+2x1 4-omino
+can't divide
+Impossible
+
+Case #35:
+1x3 1-omino
+OK
+
+Case #36:
+1x2 3-omino
+can't divide
+Impossible
+
+Case #37:
+1x2 1-omino
+OK
+
+Case #38:
+4x4 4-omino
+OK
+
+Case #39:
+4x1 3-omino
+can't divide
+Impossible
+
+Case #40:
+2x4 3-omino
+can't divide
+Impossible
+
+Case #41:
+3x3 1-omino
+OK
+
+Case #42:
+4x4 2-omino
+OK
+
+Case #43:
+1x1 4-omino
+can't divide
+Impossible
+
+Case #44:
+4x2 3-omino
+can't divide
+Impossible
+
+Case #45:
+3x4 1-omino
+OK
+
+Case #46:
+3x2 4-omino
+can't divide
+Impossible
+
+Case #47:
+2x4 1-omino
+OK
+
+Case #48:
+1x1 2-omino
+can't divide
+Impossible
+
+Case #49:
+2x1 3-omino
+can't divide
+Impossible
+
+Case #50:
+1x1 1-omino
+OK
+
+Case #51:
+2x1 1-omino
+OK
+
+Case #52:
+1x4 2-omino
+OK
+
+Case #53:
+3x3 4-omino
+can't divide
+Impossible
+
+Case #54:
+1x4 1-omino
+OK
+
+Case #55:
+4x1 2-omino
+OK
+
+Case #56:
+3x4 4-omino
+OK
+
+Case #57:
+2x2 3-omino
+can't divide
+Impossible
+
+Case #58:
+2x4 2-omino
+OK
+
+Case #59:
+4x3 1-omino
+OK
+
+Case #60:
+1x4 4-omino
+an L shape doesn't fit
+Impossible
+
+Case #61:
+3x2 1-omino
+OK
+
+Case #62:
+4x4 1-omino
+OK
+
+Case #63:
+4x2 2-omino
+OK
+
+Case #64:
+1x2 4-omino
+can't divide
+Impossible
+

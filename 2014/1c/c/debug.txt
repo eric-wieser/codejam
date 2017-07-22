@@ -1,0 +1,203 @@
+(3, 4, 10) <Diamond 3x4 area=10 perim=8
+	.##
+	#.#
+	#.#
+	##.
+>
+Too small
+(3, 3, 9) <Diamond 3x3 area=9 perim=8
+	###
+	#.#
+	###
+>
+Too small
+Too small
+Too small
+Too small
+Too small
+(3, 5, 11) <Diamond 3x5 area=11 perim=8
+	.#.
+	#.#
+	#.#
+	#.#
+	.#.
+>
+Too small
+Too small
+(3, 3, 5) <Diamond 3x3 area=5 perim=4
+	.#.
+	#.#
+	.#.
+>
+Too small
+Too small
+(4, 4, 14) <Diamond 4x4 area=14 perim=10
+	.###
+	#..#
+	#..#
+	###.
+>
+Too small
+Too small
+Too small
+Too small
+Too small
+(3, 6, 5) <Diamond 3x3 area=5 perim=4
+	.#.
+	#.#
+	.#.
+>
+Too small
+Too small
+(4, 4, 10) <Diamond 4x4 area=10 perim=7
+	.##.
+	#..#
+	.#.#
+	..#.
+>
+(3, 6, 17) <Diamond 3x6 area=17 perim=13
+	###
+	#.#
+	#.#
+	#.#
+	#.#
+	##.
+>
+Too small
+(4, 4, 15) <Diamond 4x4 area=15 perim=11
+	####
+	#..#
+	#..#
+	###.
+>
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+(4, 5, 16) <Diamond 4x5 area=16 perim=10
+	.##.
+	#..#
+	#..#
+	#..#
+	.##.
+>
+Too small
+(4, 4, 10) <Diamond 4x4 area=10 perim=7
+	.##.
+	#..#
+	.#.#
+	..#.
+>
+Too small
+Too small
+Too small
+Too small
+Too small
+(3, 4, 11) <Diamond 3x4 area=11 perim=9
+	###
+	#.#
+	#.#
+	##.
+>
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+(3, 5, 5) <Diamond 3x3 area=5 perim=4
+	.#.
+	#.#
+	.#.
+>
+Too small
+(4, 5, 8) <Diamond 3x4 area=8 perim=6
+	.#.
+	#.#
+	#.#
+	.#.
+>
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+(3, 5, 6) <Diamond 3x3 area=6 perim=5
+	.##
+	#.#
+	.#.
+>
+Too small
+Too small
+Too small
+Too small
+(3, 6, 17) <Diamond 3x6 area=17 perim=13
+	###
+	#.#
+	#.#
+	#.#
+	#.#
+	##.
+>
+Too small
+Too small
+Too small
+(4, 5, 14) <Diamond 4x5 area=14 perim=9
+	.##.
+	#..#
+	#..#
+	.#.#
+	..#.
+>
+Too small
+Too small
+Too few
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+Too small
+(4, 5, 10) <Diamond 4x4 area=10 perim=7
+	.##.
+	#..#
+	.#.#
+	..#.
+>
+Too small
+Too small
+Too small
+(4, 4, 12) <Diamond 4x4 area=12 perim=8
+	.##.
+	#..#
+	#..#
+	.##.
+>
+Too small
+Too few
+(4, 5, 14) <Diamond 4x5 area=14 perim=9
+	.##.
+	#..#
+	#..#
+	.#.#
+	..#.
+>
+Too small
+Too small

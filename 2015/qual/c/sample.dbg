@@ -1,0 +1,35 @@
+Case #1:
+Total == -j^1 == -j != -1
+NO
+
+Case #2:
+In:   [i, j, k] * 1
+Fsum: [1, i, k, -1]
+Bsum: [1, k, i, -1]
+iIK:  1 -1 11
+IJK:  [i] [j] [k]
+YES
+
+Case #3:
+Total == 1^1 == 1 != -1
+NO
+
+Case #4:
+In:   [j, i] * 6
+Fsum: [1, j, -k]
+Bsum: [1, i, -k]
+iIK:  3 -6 2
+IJK:  [j, i, j] [i, j, i] [j, i, j, i, j, i]
+YES
+
+Case #5:
+In:   [i] * 10002
+Fsum: [1, i]
+Bsum: [1, i]
+No K
+NO
+
+Case #6:
+Total == -j^100000000000 == 1 != -1
+NO
+
