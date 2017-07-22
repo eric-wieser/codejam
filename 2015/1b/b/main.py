@@ -4,7 +4,7 @@ import math
 from collections import defaultdict
 import numpy as np
 
-which = 'small.1'
+which = 'large'
 
 dbg = open('{}.dbg'.format(which), 'w')
 sys.stdin = open('{}.in'.format(which))
@@ -130,7 +130,6 @@ def solve2(r, c, n):
 	patterns = list(tilings(r, c))
 	print >> dbg, patterns
 	return min(cost(p, n) for p in patterns)
-
 
 
 

@@ -10,20 +10,27 @@ sys.stdin = open('{}.in'.format(which))
 # sys.stdout = open('{}.out'.format(which), 'w')
 
 
-def solve(r, c, n):
-	grid = np.ones(r, c)
-	neighbours = grid*4
-	neighbours[0,:] -= 1
-	neighbours[-1,:] -= 1
-	neighbours[:,0] -= 1
-	neighbours[:,-1] -= 1
+def solve(n):
 
-	print neighbours
+	while n > 10:
+		sn = str(n)
+		snr = sn[::-1]
+		steps = 0
+
+		to_pow_10 = min(
+			int(sn[0]) + int(sn[1:]),
+			int(snr[0]) + int(snr[1:])
+		)
+		print to_pow_10
+		steps += to_pow_10 + 9
+		n = 10 ** (len(sn) - 1) - 9
+		print n, steps
 
 
+print solve(7542)
 
-t = int(raw_input())
+# t = int(raw_input())
 
-for i in range(t):
-	r, c, n = [int(c) for c in raw_input().split()]
-	print solve(r, c, n)
+# for i in range(t):
+# 	n = int(raw_input())
+# 	print solve(n)
